@@ -1,183 +1,151 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Приватний кабінет Левка Павла</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-        header {
-            background: #3a8bbb; /* Спокійний синій */
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
-            margin: 10px 0 0;
-        }
-        .photo {
-            margin-top: 20px;
-        }
-        .photo img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        section {
-            margin: 40px 0; /* Збільшено відступи між секціями */
-        }
-        .services h2, .contact h2, .reviews h2 {
-            color: #3a8bbb;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table th, table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-        table th {
-            background: #3a8bbb;
-            color: white;
-        }
-        .btn {
-            display: inline-block;
-            background: #ffa500; /* Оранжевий */
-            color: white;
-            padding: 10px 20px; /* Зменшено розмір кнопки */
-            text-decoration: none;
-            border-radius: 10px;
-            margin-top: 20px;
-            font-size: 1em; /* Зменшено шрифт кнопки */
-            font-weight: bold;
-            animation: pulse 1.5s infinite;
-        }
-        .btn:hover {
-            background: #ff8c00; /* Інтенсивніший оранжевий */
-        }
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 10px rgba(255, 165, 0, 0.6);
-            }
-            50% {
-                transform: scale(1.1);
-                box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 10px rgba(255, 165, 0, 0.6);
-            }
-        }
-        footer {
-            background: #3a8bbb;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pavlo Levko – QA Engineer</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6); /* затемнення */
+      z-index: 1;
+    }
+
+    header h1,
+    header p {
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 20px;
+      color: #ccc;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #222;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .socials {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      background: #007bff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .socials a:hover {
+      background: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Приватний кабінет Левка Павла</h1>
-        <a href="https://t.me/Programer_ua" target="_blank" class="btn">Записатися на масаж</a>
-<h4>Досвід роботи 14 років. Медична освіта. Більше 2500 задоволених клієнтів. Навчив більше 300 учнів своєї методики масажу. </h4>
-   </header>
 
-    <div class="container">
-        <section class="services">
-            <h2>Послуги</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Послуга</th>
-                        <th>Тривалість</th>
-                        <th>Ціна</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Масаж спини</td>
-                        <td>40 хвилин</td>
-                        <td>600 грн</td>
-                    </tr>
-                    <tr>
-                        <td>Загальний масаж</td>
-                        <td>60 хвилин</td>
-                        <td>1000 грн</td>
-                    </tr>
-                     <tr>
-                        <td>Шийно-комірцева зона</td>
-                        <td>30 хвилин</td>
-                        <td>500 грн</td>
-                    </tr>
-                    <tr>
-                        <td>Дитячий масаж (до 3 років)</td>
-                        <td>30 хвилин</td>
-                        <td>400 грн</td>
-                    </tr>
-                    <tr>
-                        <td>Голкотерапія</td>
-                        <td>40 хвилин</td>
-                        <td>800 грн</td>
-                    </tr>
-                    <tr>
-                        <td>Реабілітація</td>
-                        <td>За запитом</td>
-                        <td>Від 1000 грн</td>
-                    </tr>
-                    <tr>
-                        <td>Подарунковий сертифікат</td>
-                        <td>На вказану суму</td>
-                        <td>На замовлення</td>
-                    </tr>
-                </tbody>
- <button class ="btn">При купівлі 10 масажів знижка -10%</button>
-            </table>
-        </section>
+<header>
+  <h1>Павло Левко</h1>
+  <p>QA Engineer | Автор курсу "Основи Manual Testing"</p>
+</header>
 
-        <section class="reviews">
-            <h2>Відгуки клієнтів</h2>
-            <p>⭐️⭐️⭐️⭐️⭐️ "Чудовий масаж, відчуваю себе набагато краще!" – Іван</p>
-            <p>⭐️⭐️⭐️⭐️⭐️ "Професійно та зручно, рекомендую всім!" – Олена</p>
-            <p>⭐️⭐️⭐️⭐️⭐️ "РЕКОМЕНДУЮ ОДНОЗНАЧНО! Павло майстер своєї справи" – Олександр</p>
-            <a href="https://maps.app.goo.gl/EKfWmobGsvVPnTkt5" target="_blank" class="buttoon">Залишити відгук</a>
-            </section>
+<section>
+  <h2>Про мене</h2>
+  <p>Привіт! Я – Павло, QA Engineer з досвідом у тестуванні мобільних і вебзастосунків. У своїй роботі я орієнтуюсь на якість, ефективність та реальні результати.</p>
+  <p>Я веду Telegram-канал, TikTok та YouTube, де навчаю тестуванню простими словами. Моя ціль – зробити якісне навчання доступним для кожного.</p>
+</section>
 
-        <section class="contact" id="contact">
-            <h2>Контакти</h2>
-            <p><strong>Телефон:</strong> +380 (63) 177 30 80</p>
-            <p><strong>Адреса:</strong> м. Львів, вул. Гетьмана Мазепи, 26</p>
-        </section>
-<a href="https://t.me/Programer_ua" target="_blank" class="btn">Записатися на масаж</a>
-    </div>
+<section>
+  <h2>Курс "Основи Manual Testing"</h2>
+  <p>Цей курс — це старт для тих, хто хоче увійти в ІТ як тестувальник. Уроки — короткі, структуровані, з прикладами з реального життя. Я пояснюю не термінами, а зрозумілою мовою.</p>
+  <ul>
+    <li>✅ Вступ до тестування</li>
+    <li>✅ Документація: тест-кейси, чек-листи, баг-репорти</li>
+    <li>✅ Типи тестування</li>
+    <li>✅ Практика: приклади з реальних проєктів</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Для навчання та співпраці заповни форму</h2>
+  <form action="https://formsubmit.co/levkopavlo@gmail.com" method="POST" style="max-width:600px;margin:auto;">
+    
+    <!-- Ім'я -->
+    <input type="text" name="name" placeholder="Ім’я" required
+      style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;">
+
+    <!-- Номер телефону -->
+    <input type="tel" name="phone" placeholder="Номер телефону" required
+      style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;">
+
+    <!-- Повідомлення -->
+    <textarea name="message" placeholder="Ваше повідомлення" required
+      style="width:100%;padding:10px;height:120px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;"></textarea>
+
+    <!-- Кнопка -->
+    <button type="submit"
+      style="background-color:#007bff;color:white;padding:10px 20px;border:none;border-radius:4px;cursor:pointer;">
+      Надіслати
+    </button>
+  </form>
+</section>
+
+<section class="socials">
+  <h2>Слідкуй за мною:</h2>
+  <a href="https://t.me/qa_hub_ua" target="_blank">Telegram</a>
+  <a href="https://www.instagram.com/levko.pavlo?igsh=MXI3M3l0Z3EwMHBhMQ==" target="_blank">Instagram</a>
+  <a href="https://www.tiktok.com/@qa_testing_ua?_t=ZM-8xRT3nGfcN3&_r=1" target="_blank">TikTok</a>
+  <a href="https://youtube.com/@qa_hub_ua?si=TIhF8L0NxqEI_JwM" target="_blank">YouTube</a>
+</section>
 
 
-    <footer>
-        <p>© 2024 Левко Павло. Усі права захищено.</p>
-    </footer>
+
+<footer>
+  &copy; 2025 Павло Левко. Усі права захищено.
+</footer>
+
 </body>
 </html>
