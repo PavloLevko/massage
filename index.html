@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pavlo Levko – QA Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -25,7 +26,7 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.6); /* затемнення */
+      background: rgba(0, 0, 0, 0.6);
       z-index: 1;
     }
 
@@ -58,24 +59,53 @@
       padding-bottom: 10px;
     }
 
-    .socials {
-      text-align: center;
-      margin-top: 40px;
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
 
-    .socials a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #fff;
-      background: #007bff;
+    form button {
+      background-color: #007bff;
+      color: white;
       padding: 10px 20px;
-      border-radius: 5px;
-      display: inline-block;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
 
-    .socials a:hover {
-      background: #0056b3;
+    .circle-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
     }
+
+    .circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: white;
+      font-size: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    .circle:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+
+    .telegram { background-color: #0088cc; }
+    .instagram { background-color: #e1306c; }
+    .tiktok { background-color: #000000; }
+    .youtube { background-color: #ff0000; }
 
     footer {
       text-align: center;
@@ -112,36 +142,22 @@
 <section>
   <h2>Для навчання та співпраці заповни форму</h2>
   <form action="https://formsubmit.co/levkopavlo@gmail.com" method="POST" style="max-width:600px;margin:auto;">
-    
-    <!-- Ім'я -->
-    <input type="text" name="name" placeholder="Ім’я" required
-      style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;">
-
-    <!-- Номер телефону -->
-    <input type="tel" name="phone" placeholder="Номер телефону" required
-      style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;">
-
-    <!-- Повідомлення -->
-    <textarea name="message" placeholder="Ваше повідомлення" required
-      style="width:100%;padding:10px;height:120px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;"></textarea>
-
-    <!-- Кнопка -->
-    <button type="submit"
-      style="background-color:#007bff;color:white;padding:10px 20px;border:none;border-radius:4px;cursor:pointer;">
-      Надіслати
-    </button>
+    <input type="text" name="name" placeholder="Ім’я" required>
+    <input type="tel" name="phone" placeholder="Номер телефону" required>
+    <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+    <button type="submit">Надіслати</button>
   </form>
 </section>
 
 <section class="socials">
   <h2>Слідкуй за мною:</h2>
-  <a href="https://t.me/qa_hub_ua" target="_blank">Telegram</a>
-  <a href="https://www.instagram.com/levko.pavlo?igsh=MXI3M3l0Z3EwMHBhMQ==" target="_blank">Instagram</a>
-  <a href="https://www.tiktok.com/@qa_testing_ua?_t=ZM-8xRT3nGfcN3&_r=1" target="_blank">TikTok</a>
-  <a href="https://youtube.com/@qa_hub_ua?si=TIhF8L0NxqEI_JwM" target="_blank">YouTube</a>
+  <div class="circle-links">
+    <a href="https://t.me/qa_hub_ua" target="_blank" class="circle telegram"><i class="fab fa-telegram-plane"></i></a>
+    <a href="https://www.instagram.com/levko.pavlo?igsh=MXI3M3l0Z3EwMHBhMQ==" target="_blank" class="circle instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@qa_testing_ua?_t=ZM-8xRT3nGfcN3&_r=1" target="_blank" class="circle tiktok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@qa_hub_ua?si=TIhF8L0NxqEI_JwM" target="_blank" class="circle youtube"><i class="fab fa-youtube"></i></a>
+  </div>
 </section>
-
-
 
 <footer>
   &copy; 2025 Павло Левко. Усі права захищено.
